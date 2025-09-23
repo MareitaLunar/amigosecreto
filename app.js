@@ -16,11 +16,14 @@ function agregarAmigo() {
             alert("Digite un amigo diferente");
         }else{
             listAmigos.push(amigo);
-            console.log(listAmigos);
             amigosList.innerHTML += `<li>${amigo}</li>`;
         }
     }
     document.getElementById('amigo').value = "";
-    
 }
  
+function sortearAmigo() {
+    amigoSecreto = listAmigos[Math.floor(Math.random()*listAmigos.length)];
+    resultado.innerHTML = `Tu amig@ secret@ es:  ${amigoSecreto}`;
+    console.log(amigoSecreto);
+}
